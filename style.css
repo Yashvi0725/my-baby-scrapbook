@@ -1,0 +1,107 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Patrick+Hand&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+
+:root{
+  --ink:#492d38; --muted:#8f6f7b; --rose:#d76f87; --deep:#9f405e;
+  --cream:#fff9f5; --pink:#f9e7e9; --paper:#fffdfb; --line:#f0d5da;
+  --shadow:0 18px 45px rgba(113,55,75,.11);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; min-height:100vh; color:var(--ink);
+  font-family:'DM Sans',sans-serif;
+  background:
+    radial-gradient(ellipse at 8% 12%,rgba(244,188,201,.35),transparent 34%),
+    radial-gradient(ellipse at 93% 80%,rgba(249,220,202,.42),transparent 30%),
+    var(--cream);
+  line-height:1.7;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.23;
+  background-image:radial-gradient(#c88f9c .65px,transparent .65px);background-size:13px 13px;
+}
+a{color:inherit;text-decoration:none}
+.topbar{
+  width:min(1120px,calc(100% - 42px));margin:0 auto;padding:26px 0 18px;
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+  border-bottom:1px solid rgba(215,111,135,.18);
+}
+.brand{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:600;letter-spacing:-.5px}
+.brand span{color:var(--rose);font-size:1.5rem}
+.nav-note,.back{font-size:.78rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.back{border:1px solid var(--line);padding:8px 14px;border-radius:999px;background:#fff9}
+.back:hover{background:white;border-color:var(--rose)}
+.home-main{width:min(1000px,calc(100% - 36px));margin:0 auto;padding:65px 0 52px;text-align:center}
+.eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.19em;color:var(--deep);text-transform:uppercase;margin:0 0 16px}
+h1,h2,.card-title{font-family:'Playfair Display',serif;font-weight:500;letter-spacing:-.035em}
+h1{font-size:clamp(2.7rem,7vw,5.1rem);line-height:1.09;margin:0 auto 22px}
+h1 em{color:var(--rose);font-weight:500}
+.intro{max-width:510px;margin:0 auto;color:#806774;font-size:1.02rem}
+.hand-note{font-family:'Patrick Hand',cursive;font-size:1.15rem;color:#a66b7c;margin:27px 0 36px;transform:rotate(-1deg)}
+.hand-note span{color:var(--rose);font-size:1.5rem}
+.scrap-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;text-align:left}
+.scrap-card{
+  min-height:218px;position:relative;display:flex;flex-direction:column;align-items:flex-start;
+  justify-content:flex-end;padding:27px 29px;border:1px solid rgba(220,166,177,.65);
+  border-radius:7px 7px 17px 7px;overflow:hidden;box-shadow:var(--shadow);
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.scrap-card:before{content:"";position:absolute;inset:0;opacity:.65;pointer-events:none}
+.scrap-card:after{content:"♡";position:absolute;right:23px;top:18px;font-family:Georgia,serif;font-size:2.5rem;color:rgba(159,64,94,.34);transform:rotate(12deg)}
+.scrap-card:hover{transform:translateY(-6px) rotate(-.3deg);box-shadow:0 24px 55px rgba(113,55,75,.17)}
+.scrap-one{background:linear-gradient(135deg,#f7dce2,#fff4ed 75%)}
+.scrap-two{background:linear-gradient(135deg,#f9e8d9,#fff6f0 75%)}
+.scrap-three{background:linear-gradient(135deg,#e9e2f0,#fff3f4 75%)}
+.scrap-four{background:linear-gradient(135deg,#f4d8d8,#fff1e8 75%)}
+.card-num{font-size:.67rem;font-weight:700;letter-spacing:.16em;color:var(--deep);margin-bottom:9px}
+.card-title{font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.2;margin-bottom:7px}
+.card-caption{font-family:'Patrick Hand',cursive;font-size:1.15rem;color:#896777}
+.card-arrow{position:absolute;bottom:25px;right:25px;color:var(--deep);font-size:1.25rem}
+.bottom-doodle{margin-top:37px;color:#b47d8c;font-family:'Patrick Hand',cursive;font-size:1.1rem}
+footer{text-align:center;padding:22px 16px 30px;font-size:.62rem;letter-spacing:.16em;color:#b18b97}
+.tape{position:absolute;width:84px;height:24px;background:rgba(255,255,255,.58);border-left:1px dashed #e6b7c2;border-right:1px dashed #e6b7c2;transform:rotate(-5deg)}
+.tape-top{top:12px;left:calc(50% - 42px);opacity:.8}
+.mini-tape{top:0;left:calc(50% - 42px);width:72px;height:20px;transform:rotate(-7deg);z-index:2}
+.letter-main{width:min(1000px,calc(100% - 36px));margin:0 auto;padding:42px 0 60px}
+.letter-main>.eyebrow{text-align:center;margin-top:4px}
+.letter-main>h1{text-align:center;font-size:clamp(2.35rem,5.8vw,4.2rem);margin-bottom:38px}
+.memory-layout{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);align-items:start;gap:28px}
+.photo-paper{margin:0;padding:13px 13px 17px;background:white;box-shadow:0 12px 35px rgba(105,59,73,.14);transform:rotate(-1.1deg);border:1px solid #f3e4e4}
+.photo-placeholder{position:relative;background:#f5e4e6;overflow:hidden;min-height:300px;display:flex;align-items:center;justify-content:center}
+.photo-placeholder img{display:block;width:100%;height:auto;max-height:580px;object-fit:cover}
+.placeholder-copy{display:none;position:absolute;text-align:center;font-size:.75rem;color:var(--muted)}
+.empty-photo .placeholder-copy{display:block}
+.photo-paper figcaption{text-align:center;font-family:'Patrick Hand',cursive;font-size:1.15rem;color:#9a6c7b;padding-top:12px}
+.letter-paper{position:relative;background:rgba(255,255,255,.85);padding:30px clamp(22px,4vw,42px);border:1px solid #f0dce0;box-shadow:0 12px 30px rgba(105,59,73,.06)}
+.letter-paper:before{content:"";position:absolute;left:18px;top:0;bottom:0;border-left:1px solid #f2dce1}
+.paper-label{display:inline-block;font-family:'Patrick Hand',cursive;color:var(--rose);font-size:1.15rem;margin-bottom:9px}
+.letter-paper p{font-size:.93rem;color:#6f5660;line-height:1.9;margin:0 0 15px}
+.letter-paper .dear{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--ink);margin-top:5px}
+.letter-paper .signoff{margin-top:24px;margin-bottom:2px}
+.signoff span{color:var(--rose)}
+.signature{font-family:'Patrick Hand',cursive!important;font-size:1.25rem!important;color:var(--deep)!important}
+.music-paper{position:relative;display:flex;gap:20px;align-items:center;margin:34px auto 25px;padding:24px 27px;background:linear-gradient(110deg,#f8e5e7,#fff8f3);border:1px solid #efd1d8;border-radius:12px;box-shadow:0 9px 25px rgba(105,59,73,.06)}
+.music-sticker{width:58px;height:58px;flex:0 0 58px;border-radius:50%;display:grid;place-items:center;background:#fff;border:1px solid #efc7d1;color:var(--rose);font-size:1.8rem;box-shadow:0 5px 14px #b86d811c}
+.music-content{min-width:0;flex:1}
+.music-content .eyebrow{font-size:.62rem;margin-bottom:4px}
+.music-content h2{font-size:1.5rem;margin:0 0 1px}
+.music-content p{font-size:.8rem;color:var(--muted);margin:0 0 13px}
+audio{width:100%;height:42px;accent-color:var(--rose)}
+.page-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-size:.83rem;color:var(--deep)}
+.page-nav a{padding:9px 14px;border:1px solid var(--line);border-radius:999px;background:#fff9;transition:.2s}
+.page-nav a:hover{background:#f8e3e8;border-color:#e8b9c5}
+.page-nav span{font-size:.7rem;letter-spacing:.14em;color:#a78791}
+@media(max-width:700px){
+ .topbar{width:calc(100% - 30px);padding:19px 0 14px}.brand{font-size:1.15rem}.nav-note{font-size:.62rem;text-align:right}
+ .home-main{padding:48px 0 35px}.intro{font-size:.94rem;max-width:360px}
+ .scrap-grid{grid-template-columns:1fr;gap:15px}.scrap-card{min-height:178px;padding:23px 24px}
+ .letter-main{padding-top:32px}.memory-layout{grid-template-columns:1fr;gap:22px}
+ .photo-paper{width:min(100%,490px);margin:0 auto;transform:rotate(-.4deg)}
+ .photo-placeholder{min-height:220px}.photo-placeholder img{max-height:520px}
+ .letter-paper{padding:27px 25px 25px}.music-paper{padding:19px 16px;gap:13px;align-items:flex-start}
+ .music-sticker{width:44px;height:44px;flex-basis:44px;font-size:1.45rem}
+ .music-content h2{font-size:1.25rem}.page-nav{font-size:.75rem}.page-nav a{padding:8px 10px}
+}
+@media(max-width:380px){.nav-note{display:none}.home-main{width:calc(100% - 28px)}h1{font-size:2.6rem}.page-nav span{display:none}.page-nav{justify-content:space-between}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
